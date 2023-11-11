@@ -1,8 +1,8 @@
-import React from 'react'
+import { stringAdapter } from '../../utils/strings-adapter'
 
 const PermisionCeld = ({permision}) => {
   return (
-    <th style={{padding:'0 1rem'}}>{permision.toLowerCase().replace(/^\w/, (c) => c.toUpperCase())}</th>
+    <th style={{padding:'0 1rem'}}>{stringAdapter(permision)}</th>
   )
 }
 

@@ -1,9 +1,10 @@
+import { stringAdapter } from "../../utils/strings-adapter"
 
 const EntityCeld = ({entity}) => {
   return (
     <th key={entity.id} 
         colspan={entity.permisions.length}>
-        {entity.name.toLowerCase().replace(/^\w/, (c) => c.toUpperCase()).split('_').join(' ')}
+        {stringAdapter(entity.name)}
     </th>
   )
 }

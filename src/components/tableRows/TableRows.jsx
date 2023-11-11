@@ -1,3 +1,4 @@
+import { stringAdapter } from "../../utils/strings-adapter"
 import WithOutPermisonCeld from "../tableCelds/WithOutPermisonCeld"
 import WithPermisionCeld from "../tableCelds/WithPermisionCeld"
 
@@ -7,7 +8,7 @@ const TableRows = ({ROLES,ENTITIES}) => {
     ROLES.map(role =>{
         return(
             <tr key={role.id}>
-              <td className='sticky_left' style={{zIndex:'10', backgroundColor:'red'}} >{role.name.toLowerCase().replace(/^\w/, (c) => c.toUpperCase()).split('_').join(' ')}</td>
+              <td className='sticky_left' style={{zIndex:'10', backgroundColor:'red'}} >{stringAdapter(role.name)}</td>
               {
                 ENTITIES.map(entity =>{
                   return entity.permisions.map(permision =>{
