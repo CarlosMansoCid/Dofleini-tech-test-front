@@ -1,6 +1,7 @@
 import { stringAdapter } from "../../utils/strings-adapter"
 import CheckBox from "../checkBox/CheckBox"
 import useToogle from "../../hooks/useToogle"
+import DeleteButton from "../buttons/DeleteButton"
 
 const EntityCeld = ({entity}) => {
   const {toogleValue,setTrue,setFalse} = useToogle()
@@ -12,10 +13,15 @@ const EntityCeld = ({entity}) => {
         onMouseEnter={()=>setTrue()}
         onMouseLeave={()=>{setFalse()}}>
         <div className="role_container">
-          {stringAdapter(entity.name)}
           {
             !!toogleValue ?
             <CheckBox onActiveAction={()=>{}} onDeactiveAction={()=>{}}/>
+            :<></>
+          }
+          {stringAdapter(entity.name)}
+          {
+            !!toogleValue ?
+            <DeleteButton/>
             :<></>
           }
         </div>
