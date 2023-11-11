@@ -66,4 +66,14 @@ export const ENTITIES = [
         'CREATE'
       ]
     },
+    {
+      id:4,
+      name:'COMPRAS',
+      permisions:[
+        'READ',
+        'UPDATE',
+        'DELETE',
+        'CREATE'
+      ]
+    },
   ]

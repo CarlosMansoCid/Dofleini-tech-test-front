@@ -1,5 +1,10 @@
 .table_celd{
     text-align: center;
+    padding: .5rem;
+    cursor: pointer;
+}
+.table_celd:hover{
+    background-color: var(--celd_header_bg_ligth);
 }
 .permision_celd{
     z-index:888;

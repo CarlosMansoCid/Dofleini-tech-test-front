@@ -5,7 +5,9 @@ function App() {
 
   return (
     <section className='App'>
-      <Table/>
+      <article className='table_container'>
+        <Table/>
+      </article>
     </section>
   );
 }
