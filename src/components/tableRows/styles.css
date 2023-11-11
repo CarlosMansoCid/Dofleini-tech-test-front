@@ -1,0 +1,7 @@
+.role_name{
+    z-index:10;
+    background-color: var(--celd_header_bg);
+    color: var(--white);
+    position: sticky;
+    left: 0px;
+}

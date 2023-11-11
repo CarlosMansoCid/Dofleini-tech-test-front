@@ -1,0 +1,11 @@
+.table_celd{
+    text-align: center;
+}
+.permision_celd{
+    z-index:888;
+    background-color: var(--celd_header_bg_dark);
+    color: var(--white);
+    position: sticky;
+    top: 0px;
+    padding: 0 2rem;
+}

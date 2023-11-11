@@ -1,8 +1,9 @@
 import { stringAdapter } from '../../utils/strings-adapter'
+import './styles.css'
 
 const PermisionCeld = ({permision}) => {
   return (
-    <th style={{padding:'0 1rem'}}>{stringAdapter(permision)}</th>
+    <th className='permision_celd'>{stringAdapter(permision)}</th>
   )
 }
 

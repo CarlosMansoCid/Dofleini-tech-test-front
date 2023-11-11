@@ -1,6 +1,7 @@
 import { stringAdapter } from "../../utils/strings-adapter"
 import WithOutPermisonCeld from "../tableCelds/WithOutPermisonCeld"
 import WithPermisionCeld from "../tableCelds/WithPermisionCeld"
+import './styles.css'
 
 
 const TableRows = ({ROLES,ENTITIES}) => {
@@ -8,7 +9,7 @@ const TableRows = ({ROLES,ENTITIES}) => {
     ROLES.map(role =>{
         return(
             <tr key={role.id}>
-              <td className='sticky_left' style={{zIndex:'10', backgroundColor:'red'}} >{stringAdapter(role.name)}</td>
+              <td className='role_name'>{stringAdapter(role.name)}</td>
               {
                 ENTITIES.map(entity =>{
                   return entity.permisions.map(permision =>{
