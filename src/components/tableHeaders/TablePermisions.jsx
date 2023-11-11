@@ -1,3 +1,4 @@
+import PermisionCeld from "../tableCelds/PermisionCeld"
 
 
 const TablePermisions = ({ENTITIES}) => {
@@ -8,7 +9,7 @@ const TablePermisions = ({ENTITIES}) => {
             ENTITIES.map(entity =>{
                 return entity.permisions.map(permision =>{
                     return(
-                        <th style={{padding:'0 1rem'}}>{permision.toLowerCase().replace(/^\w/, (c) => c.toUpperCase())}</th>
+                        <PermisionCeld permision={permision}/>
                     )
                 })
             })

@@ -1,3 +1,4 @@
+import EntityCeld from "../tableCelds/EntityCeld"
 
 const TableHeaders = ({ENTITIES}) => {
   return (
@@ -7,10 +8,7 @@ const TableHeaders = ({ENTITIES}) => {
             {
             ENTITIES.map((entity)=>{
                 return(
-                    <th key={entity.id} 
-                        colspan={entity.permisions.length}>
-                            {entity.name.toLowerCase().replace(/^\w/, (c) => c.toUpperCase()).split('_').join(' ')}
-                    </th>
+                        <EntityCeld key={entity.id} entity={entity}/>
                     )
                 })
             }
