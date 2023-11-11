@@ -6,8 +6,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+table, tr, th, td{
+  border: solid 1px red;
+  border-collapse: collapse;
+}
+#full{
+  width: 100%;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.table_celd{
+  text-align: center;
+}
+.sticky_left{
+  position: sticky;
+  left: 0px;
+}
+.sticky_top{
+  position: sticky;
+  top: 0px;
 }
