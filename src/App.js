@@ -1,11 +1,11 @@
 import './App.css';
-import { ROLES, ENTITIES } from './mocks/data';
+import Table from './modules/table/Table';
 
 function App() {
 
   return (
     <section className='App'>
-
+      <Table/>
     </section>
   );
 }
