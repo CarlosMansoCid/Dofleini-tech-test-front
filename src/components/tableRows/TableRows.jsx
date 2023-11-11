@@ -1,28 +1,22 @@
-import { stringAdapter } from "../../utils/strings-adapter"
-import WithOutPermisonCeld from "../tableCelds/WithOutPermisonCeld"
-import WithPermisionCeld from "../tableCelds/WithPermisionCeld"
+import RoleCeld from "../tableCelds/RoleCeld"
+import PermisionsByRoleRows from "./PermisionsByRoleRows"
 import './styles.css'
 
 
 const TableRows = ({ROLES,ENTITIES}) => {
   return (
-    ROLES.map(role =>{
-        return(
-            <tr key={role.id}>
-              <td className='role_name'>{stringAdapter(role.name)}</td>
-              {
-                ENTITIES.map(entity =>{
-                  return entity.permisions.map(permision =>{
-                    return role.permissions.includes(`${entity.name}:${permision}`) ?
-                    <WithPermisionCeld/>
-                    :
-                    <WithOutPermisonCeld/>
-                  })
-                })
-              }
-            </tr>
-        )
-    })
+    <>
+      {    
+        ROLES.map(role =>{
+          return(
+              <tr key={role.id}>
+                <RoleCeld role={role}/>
+                <PermisionsByRoleRows ENTITIES={ENTITIES} role={role}/>
+              </tr>
+            )
+        })
+      }
+    </>
   )
 }
 

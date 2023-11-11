@@ -14,7 +14,14 @@
     top: 0px;
     padding: 0 2rem;
 }
-
+.entity_celd{
+    transition: .3s;
+    cursor: pointer;
+}
+.entity_celd:hover{
+    background-color: var(--celd_header_bg_dark);
+    color: var(--white);
+}
 .icon{
     padding: .5rem;
     border-radius: 10px;
@@ -28,4 +35,25 @@
 }
 #no_checked{
     background-color: var(--red);
+}
+
+.role_name{
+    z-index:10;
+    background-color: var(--celd_header_bg);
+    color: var(--white);
+    position: sticky;
+    left: 0px;
+    min-width: 10rem;
+    padding: 0 .3rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.role_name:hover{
+    background-color: var(--celd_header_bg_dark);
+}
+.role_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
