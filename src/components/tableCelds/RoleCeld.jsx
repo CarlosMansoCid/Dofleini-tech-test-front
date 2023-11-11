@@ -12,6 +12,7 @@ const RoleCeld = ({role}) => {
         onMouseEnter={()=>setTrue()}
         onMouseLeave={()=>setFalse()}>
       <div className="role_container">
+        {stringAdapter(role.name)}
         {
           !!toogleValue ?
             <CheckBox onActiveAction={()=>console.log('activado')}
@@ -19,7 +20,6 @@ const RoleCeld = ({role}) => {
           :
           <></>
         }
-        {stringAdapter(role.name)}
       </div>
     </td>
   )

@@ -12,11 +12,13 @@
     color: var(--white);
     position: sticky;
     top: 0px;
-    padding: 0 2rem;
+    padding: .5rem 2rem;
+    cursor: pointer;
 }
 .entity_celd{
     transition: .3s;
     cursor: pointer;
+    padding: 1rem;
 }
 .entity_celd:hover{
     background-color: var(--celd_header_bg_dark);
@@ -52,6 +54,7 @@
     background-color: var(--celd_header_bg_dark);
 }
 .role_container{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;

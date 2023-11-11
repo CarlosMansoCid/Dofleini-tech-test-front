@@ -1,6 +1,6 @@
-import React from 'react'
+import './styles.css'
 
-const CheckBox = ({onActiveAction, onDeactiveAction}) => {
+const CheckBox = ({onActiveAction, onDeactiveAction, isExternalActivated=false}) => {
 
   const action = (e) =>{
 
@@ -11,7 +11,7 @@ const CheckBox = ({onActiveAction, onDeactiveAction}) => {
   }
 
   return (
-    <input type="checkbox"  onChange={(e)=>action(e)}/>
+    <input type="checkbox"  onChange={(e)=>action(e)} className="ckeckbox" checked={isExternalActivated}/>
   )
 }
 
