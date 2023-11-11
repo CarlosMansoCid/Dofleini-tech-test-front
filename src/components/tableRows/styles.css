@@ -4,6 +4,5 @@
     color: var(--white);
     position: sticky;
     left: 0px;
-    width: 10rem;
-    padding: .5rem;
+    min-width: 10rem;
 }

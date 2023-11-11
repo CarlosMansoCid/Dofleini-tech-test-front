@@ -3,7 +3,9 @@
   --celd_header_bg_ligth: #e2abfb;
   --celd_header_bg: #ae00ff;
   --celd_header_bg_dark: #5f028a;
-  --white: #ffffff
+  --white: #ffffff;
+  --green: #189a01;
+  --red: #9a0101;
 }
 body {
   margin: 0;
