@@ -1,6 +1,7 @@
 import EntityCeld from "../tableCelds/EntityCeld"
 import './styles.css'
 const TableHeaders = ({ENTITIES}) => {
+  
   return (
     <>
         <tr>

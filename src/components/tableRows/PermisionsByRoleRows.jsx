@@ -6,7 +6,7 @@ import './styles.css'
 const PermisionsByRoleRows = ({ENTITIES, role}) => {
   return (
     ENTITIES.map(entity =>{
-        return entity.permisions.map(permision =>{
+        return entity.permissions.map(permision =>{
           return <WithOrNoPermiseCeldBody isActive={role.permissions.includes(`${entity.name}:${permision}`)}/>
         })
       })

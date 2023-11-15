@@ -1,4 +1,4 @@
-.upper_celd, .roles_header{
+ .roles_header{
     z-index:999;
     color: var(--white);
     position: sticky;

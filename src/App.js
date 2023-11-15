@@ -1,14 +1,21 @@
 import './App.css';
 import Table from './modules/table/Table';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+
+
 
 function App() {
-
+  const queryClient = new QueryClient()
+  
   return (
-    <section className='App'>
-      <article className='table_container'>
-        <Table/>
-      </article>
-    </section>
+    <QueryClientProvider client={queryClient}>
+      <section className='App'>
+        <article className='table_container'>
+          <Table/>
+        </article>
+      </section>
+    </QueryClientProvider>
   );
 }
 

@@ -14,11 +14,15 @@
     top: 0px;
     padding: .5rem 2rem;
     cursor: pointer;
+    min-width: 8rem;
+    height: 2rem;
 }
 .entity_celd{
     transition: .3s;
     cursor: pointer;
     padding: 1rem;
+    min-width:10rem;
+    height: 2rem;
 }
 .entity_celd:hover{
     background-color: var(--celd_header_bg_dark);
@@ -49,6 +53,7 @@
     padding: 0 .3rem;
     cursor: pointer;
     transition: .3s;
+    min-width: 10rem;
 }
 .role_name:hover{
     background-color: var(--celd_header_bg_dark);
