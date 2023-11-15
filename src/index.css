@@ -4,11 +4,13 @@
   --celd_header_bg: #ae00ff;
   --celd_header_bg_dark: #5f028a;
   --white: #ffffff;
-  --green: #189a01;
+  --green: #1a9c03;
+  --green_dark: #123123;
   --red: #9a0101;
 }
 body {
   margin: 0;
+  scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
