@@ -1,0 +1,21 @@
+.basic_modal{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color:#c3c1c1c3;
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.basic__modal_children_container{
+    position: relative;
+    min-width: 10rem;
+    min-height: 10rem;
+    background-color: #ddd;
+    z-index: 999;
+    padding: 1rem;
+}

@@ -4,7 +4,7 @@ import './dockButtons.styles.css'
 
 const DockButton = ({title, variant, action}) => {
   return (
-    <div onClick={()=>action()} id={variant} className="dock__button">
+    <button onClick={()=>action()} id={variant} className="dock__button">
         <div className="dock__button_icon">
             {
                 variant === dockButtonsVariants.add ? 
@@ -16,7 +16,7 @@ const DockButton = ({title, variant, action}) => {
         <div className="dock__button_title">
             {title}
         </div>
-    </div>
+    </button>
   )
 }
 

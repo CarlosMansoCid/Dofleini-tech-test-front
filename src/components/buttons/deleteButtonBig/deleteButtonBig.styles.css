@@ -1,0 +1,21 @@
+.delete_button_big{
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #ddd;
+    cursor: pointer;
+}
+#active{
+    pointer-events: all;
+    background-color: var(--red_ligth);
+}
+#active:hover{
+    background-color: var(--red);
+}
+#active:active{
+    background-color: var(--red_ligth)
+}
+#inactive{
+    pointer-events: none;
+    background-color: #7b5050;
+}

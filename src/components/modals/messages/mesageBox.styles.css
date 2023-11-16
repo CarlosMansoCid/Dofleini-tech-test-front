@@ -1,0 +1,23 @@
+.message{
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.message__label{
+    margin-right: .5rem;
+}
+.message, .warning__label, .warning__content_label{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+#ERROR{
+    background-color: var(--red_ligth);
+    color: var(--red);
+}
+#SUCCESS{
+    background-color: var(--green);
+    color: var(--green_dark);
+}

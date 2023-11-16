@@ -1,0 +1,22 @@
+.close_modal_button_radio{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+    background-color: var(--red_ligth);
+    transition: .3s;
+    border: none;
+    padding: .2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+    cursor: pointer;
+}
+.close_modal_button_radio:hover{
+    background-color: var(--red);
+}
+.close_modal_button_radio:active{
+    background-color: var(--red_ligth);
+}

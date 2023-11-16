@@ -3,10 +3,21 @@ import './styles.css'
 import useToogle from '../../hooks/useToogle'
 import CheckBox from "../checkBox/CheckBox"
 import DeleteButton from "../buttons/DeleteButton"
+import { useContext } from "react"
+import { ModalContext } from "../../contexts/ModalContext"
+import { MODALS_TYPES } from "../modals/modalsManager/ModalsManager"
 
 const RoleCeld = ({role}) => {
+  const {toogleValue,setTrue ,setFalse} = useToogle()
+  const {setModalPayload, setOpenModal} = useContext(ModalContext)
 
-  const {toogleValue,setTrue,setFalse} = useToogle()
+  const handleDeleteRole = () =>{
+    setModalPayload({
+      type: MODALS_TYPES.DELETE_ROLE,
+      payload:role
+    })
+    setOpenModal()
+  }
 
   return (
     <td className='role_name' 
@@ -24,7 +35,7 @@ const RoleCeld = ({role}) => {
         {stringAdapter(role.name)}
         {
           !!toogleValue ?
-            <DeleteButton/>
+            <DeleteButton action={()=>handleDeleteRole()}/>
           :
           <></>
         }

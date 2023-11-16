@@ -6,7 +6,8 @@
   --white: #ffffff;
   --green: #1a9c03;
   --green_dark: #123123;
-  --red: #9a0101;
+  --red: #790101;
+  --red_ligth: #ed2525;
 }
 body {
   margin: 0;
