@@ -1,21 +1,11 @@
 import './App.css';
+import MainDock from './components/mainDock/MainDock';
 import ModalContextProvider from './contexts/ModalContextProvider';
 import Dock from './modules/dock/Dock.module';
 import Table from './modules/table/Table.module';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-export const buttonsData = [
-  {
-    title: 'Agregar rol',
-    variant: 'add',
-    action: () => {}
-  },
-  {
-    title: 'Agregar entidad',
-    variant: 'add',
-    action: ()=>{}     
-  }
-]
+
 
 
 
@@ -26,7 +16,7 @@ function App() {
     <ModalContextProvider>
       <QueryClientProvider client={queryClient}>
         <section className='App'>
-          <Dock buttons={buttonsData}/>
+          <MainDock/>
           <article className='table_container'>
             <Table/>
           </article>

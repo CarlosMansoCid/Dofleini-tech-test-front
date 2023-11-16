@@ -24,10 +24,15 @@ const DeleteRoleModal = () => {
             :<></>
           }
           <div className="modal__button_container">
-            <DeleteButtonBig title='Eliminar rol' 
-                             action={()=>deleteRole.mutate(modalPayload.payload._id)}
-                             onProccess={deleteRole.isPending}/> 
-          </div>
+            {
+              !deleteRole.isSuccess && !deleteRole.isError ?
+              <DeleteButtonBig title='Eliminar rol' 
+                               action={()=>deleteRole.mutate(modalPayload.payload._id)}
+                               onProccess={deleteRole.isPending}/>
+              :
+              <></>
+            }
+              </div>
       </div>
     </BasicModal>
   )
