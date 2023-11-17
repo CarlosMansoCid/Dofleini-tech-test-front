@@ -1,35 +1,40 @@
-.modal__content_container{
+.new_role_modal__content_container{
     min-width: 30vw;
     border-radius: 5px;
-    min-height: 20vh;
-    position: relative;
     margin: 1rem auto;
     display: flex;
     flex-direction: column;
-    justify-content:start ;
     align-items: center;
 }
-.input{
-    padding: 1rem;
+.new_role__input{
     border: none;
     border-radius: 5px;
-    margin: 3rem auto;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
 
 }
 .role_form{
     width: 80%;
-    margin: 1rem auto;
+    margin: 0 auto;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-.role_submit_button{
-    width: 50%;
-    border-radius: 10px;
+.new_role__submit_button{
+    width: 100%;
+    border-radius: 5px;
     border: none;
-    padding: .5rem;
+    padding: 1rem 0;
     text-align: center;
+    cursor: pointer;
+    background-color: var(--green);
+    color: #ddd;
+    transition: .3s;
+    margin-top: 1rem;
+}
+.new_role__submit_button:hover{
+    background-color: var(--green_dark);
 }
 
 #inactive{

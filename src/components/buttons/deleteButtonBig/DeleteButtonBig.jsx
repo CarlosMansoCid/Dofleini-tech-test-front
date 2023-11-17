@@ -1,6 +1,6 @@
 import './deleteButtonBig.styles.css'
 
-const DeleteButtonBig = ({active, action, title, onProccess}) => {
+const DeleteButtonBig = ({active, action, title, onProccess, id}) => {
   return (
     <button className='delete_button_big' 
             onClick={()=>action()}

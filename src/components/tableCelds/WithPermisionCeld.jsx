@@ -2,9 +2,9 @@ import CheckIcon from './CheckIcon'
 import './styles.css'
 
 
-const WithPermisionCeld = () => {
+const WithPermisionCeld = ({action}) => {
   return (
-    <td className='table_celd'>
+    <td className='table_celd' onClick={()=>action()}>
       <CheckIcon/>
     </td>
   )

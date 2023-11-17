@@ -1,9 +1,11 @@
 .delete_button_big{
     border: none;
-    padding: 1rem;
+    width: 100%;
     border-radius: 5px;
     color: #ddd;
     cursor: pointer;
+    transition: .3s;
+    padding: 1rem 0;
 }
 #active{
     pointer-events: all;

@@ -24,11 +24,11 @@ const AddRoleModal = () => {
   
   return (
     <BasicModal>
-        <div className="modal__content_container">
+        <div className="new_role_modal__content_container">
             <h5>Crear nuevo rol</h5>
             <form onSubmit={handleSubmit(onSubmit)} className="role_form">
                 <input type="text" 
-                       className="input"
+                       className="new_role__input"
                        title="Solo debe contener letas mayusculas, en caso de ser varias palabras debe separarla 
                               con guion bajo, ej: ROLE o NEW_ROLE"
                        placeholder="Nombre del rol "
@@ -56,9 +56,9 @@ const AddRoleModal = () => {
                 {
                     !errors?.name && !!name ?
                     <input  type="submit" 
-                            value='Crear'
-                            id="inactive" 
-                            className="role_submit_button"/>
+                            value={createRole.isPending ? 'loading...' : 'Agregar'}
+                            id={createRole.isPending ? 'inactive' : ''}
+                            className="new_role__submit_button"/>
                     :<></>
                 }
             </form>

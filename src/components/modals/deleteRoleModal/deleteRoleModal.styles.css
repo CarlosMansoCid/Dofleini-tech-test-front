@@ -1,17 +1,15 @@
-.modal__content_container{
-    min-width: 50vw;
+.delete_modal__content_container{
+    min-width: 20vw;
     border-radius: 5px;
-    min-height: 20vh;
     position: relative;
     margin: 1rem auto;
     justify-content:center ;
 }
 
-.modal__button_container{
-    width: 98%;
+.delete_modal__button_container{
+    width: 100%;
     margin: 1rem auto;
     display: flex;
-    padding: .5rem;
     flex-direction: row;
     align-items: center;
     justify-content: center;

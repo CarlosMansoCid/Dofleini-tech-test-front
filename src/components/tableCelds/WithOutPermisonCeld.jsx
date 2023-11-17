@@ -1,9 +1,9 @@
 import NoCheckedIcon from './NoCheckedIcon'
 import './styles.css'
 
-const WithOutPermisonCeld = () => {
+const WithOutPermisonCeld = ({action}) => {
   return (
-    <td className='table_celd'>
+    <td className='table_celd' onClick={()=>action()}>
       <NoCheckedIcon/>
     </td>
   )

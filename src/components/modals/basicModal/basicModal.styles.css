@@ -14,7 +14,7 @@
 .basic__modal_children_container{
     position: relative;
     min-width: 10rem;
-    min-height: 10rem;
+    min-height: 5rem;
     background-color: #ddd;
     z-index: 999;
     padding: 1rem;

@@ -13,7 +13,7 @@ const DeleteRoleModal = () => {
 
   return (
     <BasicModal>
-      <div className="modal__content_container">
+      <div className="delete_modal__content_container">
           <h5>Desea borrar el rol: {modalPayload.payload.name}</h5>
           {
             !!deleteRole.isSuccess ?
@@ -23,7 +23,7 @@ const DeleteRoleModal = () => {
                                              message={deleteRole?.error?.response?.data?.message}/>
             :<></>
           }
-          <div className="modal__button_container">
+          <div className="delete_modal__button_container">
             {
               !deleteRole.isSuccess && !deleteRole.isError ?
               <DeleteButtonBig title='Eliminar rol' 
