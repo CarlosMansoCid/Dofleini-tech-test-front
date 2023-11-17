@@ -1,0 +1,16 @@
+.add_all_permissions_names_span{
+    color: var(--green);
+    margin: 0 .5rem;
+}
+.add_all_permissions_modal__button_container{
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.add_all_permissions_modal__content_container{
+    width: 98%;
+    margin: 0 auto;
+}
