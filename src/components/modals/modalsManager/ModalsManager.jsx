@@ -3,11 +3,13 @@ import { ModalContext } from "../../../contexts/ModalContext"
 const DeleteRoleModal = lazy(()=>import('../deleteRoleModal/DeleteRoleModal'))
 const AddRoleModal = lazy(()=>import('../addRoleModal/AddRoleModal'))
 const AddPermissionAtRoleModal = lazy(()=>import('../addPermissionsAtRoleModal/AddPermissionsAtRoleModal'))
+const DeletePermissionFromRole = lazy(()=>import('../deletePermissionFromRole/DeletePermissionFromRole'))
 
 export const MODALS_TYPES = Object.freeze({
     DELETE_ROLE: 'delete-role',
     ADD_ROLE: 'add-role',
-    ADD_PERMISSION_AT_ROLE: 'add-permission-at-role'
+    ADD_PERMISSION_AT_ROLE: 'add-permission-at-role',
+    DELETE_PERMISSION_FROM_ROLE: 'delete-permission-from-role'
 })
 const ModalsLoader = () =>{
     const {modalPayload} = useContext(ModalContext)
@@ -15,7 +17,8 @@ const ModalsLoader = () =>{
     switch(modalPayload?.type){
         case MODALS_TYPES.DELETE_ROLE: return <DeleteRoleModal/>;
         case MODALS_TYPES.ADD_ROLE: return <AddRoleModal/>;
-        case MODALS_TYPES.ADD_PERMISSION_AT_ROLE: return <AddPermissionAtRoleModal/>
+        case MODALS_TYPES.ADD_PERMISSION_AT_ROLE: return <AddPermissionAtRoleModal/>;
+        case MODALS_TYPES.DELETE_PERMISSION_FROM_ROLE: return <DeletePermissionFromRole/>;
         default: return <></>
     }
 }

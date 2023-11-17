@@ -17,10 +17,20 @@ const WithOrNoPermiseCeldBody = ({isActive, entity, permision, role}) => {
       permission: permision})
     context.setOpenModal()
   }
+  const handleDeletePermission = () =>{
+    context.setModalPayload({
+      type: MODALS_TYPES.DELETE_PERMISSION_FROM_ROLE,
+      role: role.name,
+      roleId: role._id,
+      entity: entity.name,
+      permission: permision
+    })
+    context.setOpenModal()
+  }
 
   return (
     isActive ?
-    <WithPermisionCeld action={()=>{}}/>
+    <WithPermisionCeld action={()=>handleDeletePermission()}/>
     :
     <WithOutPermisonCeld action={()=>handleAddPermission()}/>
   )
