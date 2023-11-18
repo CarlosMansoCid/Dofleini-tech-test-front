@@ -29,7 +29,19 @@ const MainDock = () => {
             })
           context.setOpenModal()
           }    
+        },
+        {
+          title: 'Agregar permiso',
+          variant: 'add',
+          action: ()=>{
+            context.setModalPayload({
+              payload:{},
+              type:MODALS_TYPES.ADD_PERMISSION
+            })
+          context.setOpenModal()
+          }    
         }
+
       ]
     
       return (
