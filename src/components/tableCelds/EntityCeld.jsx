@@ -21,6 +21,13 @@ const EntityCeld = ({entity}) => {
     })
     context.setOpenModal()
   }
+  const handleDeleteAllThePermissionsFromAllRoles = () =>{
+    context.setModalPayload({
+      type: MODALS_TYPES.DELETE_ALL_ENTITY_PERMISSIONS_FROM_ALL_ROLES,
+      entity: entity
+    })
+    context.setOpenModal()
+  }
 
   return (
     <th key={entity.id} 
@@ -32,7 +39,7 @@ const EntityCeld = ({entity}) => {
           {
             !!toogleValue ?
             <CheckBox onActiveAction={()=>handleAddAllThePermissions()} 
-                      onDeactiveAction={()=>{}}
+                      onDeactiveAction={()=>handleDeleteAllThePermissionsFromAllRoles()}
                       isExternalActivated={haveAllThePermissions}
                       />
             :<></>

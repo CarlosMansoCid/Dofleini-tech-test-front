@@ -1,7 +1,7 @@
 import './styles.css'
 
 const CheckBox = ({onActiveAction, onDeactiveAction, isExternalActivated=false}) => {
-
+  console.log(onDeactiveAction)
   const action = (value) =>{
     value ?
     onActiveAction()

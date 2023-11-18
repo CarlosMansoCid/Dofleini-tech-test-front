@@ -16,7 +16,7 @@ const DeletePermissionFromRoleModal = () => {
       permissions:[`${modalPayload.entity}:${modalPayload.permission}`],
       id:modalPayload.roleId
     })
-  }
+  } 
   return (
     <BasicModal>
       <div className="delete_role_modal__content_container">
