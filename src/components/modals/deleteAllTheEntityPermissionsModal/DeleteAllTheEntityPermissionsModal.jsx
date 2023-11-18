@@ -20,7 +20,11 @@ const DeleteAllEntityPermissionsModal = () => {
   return (
     <BasicModal>
       <div className="modal__content_container">
-          <h5>Desea retirar todos los permisos de la entidad: 
+          <h5>
+            {
+              modalPayload.one ? `Desea eliminar el permiso ${modalPayload.permissions} de la entidad ` 
+              :'Desea retirar todos los permisos de la entidad:'
+            } 
             <span className="red_names_span">{modalPayload.entity.name}</span> 
           </h5>
           {
@@ -31,7 +35,7 @@ const DeleteAllEntityPermissionsModal = () => {
                                              message={deletePermissions?.error?.response?.data?.message}/>
             :<></>
           }
-          <div className="delete_role_modal__button_container">
+          <div className="add_modal__button_container">
           {
             !deletePermissions.isSuccess && !deletePermissions.isError ?
             <DeleteButtonBig action={()=>handleDeletePermission()} 
