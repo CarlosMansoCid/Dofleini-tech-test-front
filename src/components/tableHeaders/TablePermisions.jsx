@@ -7,10 +7,11 @@ const TablePermisions = ({ENTITIES}) => {
         <th className='roles_header'>Roles</th>
         {
             ENTITIES.map(entity =>{
-                return entity.permissions.map(permission =>{
+                return entity.permissions.map((permission, index) =>{
                     return(
                         <PermisionCeld permission={permission} 
-                                       entity={entity}/>
+                                       entity={entity}
+                                       key={index}/>
                     )
                 })
             })

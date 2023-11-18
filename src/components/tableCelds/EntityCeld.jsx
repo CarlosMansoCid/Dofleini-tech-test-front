@@ -40,7 +40,7 @@ const EntityCeld = ({entity}) => {
   return (
     <th key={entity.id} 
         className="entity_celd"
-        colspan={entity.permissions.length}
+        colSpan={entity.permissions.length}
         onMouseEnter={()=>setTrue()}
         onMouseLeave={()=>{setFalse()}}>
         <div className="role_container">

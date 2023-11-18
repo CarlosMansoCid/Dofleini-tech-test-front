@@ -20,9 +20,13 @@ const Table = () => {
   return (
     <>
       <table>
-        <TableHeaders ENTITIES={data.statusText ? data.data.entities : []}/>
-        <TablePermisions ENTITIES={data.statusText ? data.data.entities : []}/> 
-        <TableRows ENTITIES={data.statusText ? data.data.entities : []} ROLES={[]}/>
+        <thead>
+          <TableHeaders ENTITIES={data.statusText ? data.data.entities : []}/>
+          <TablePermisions ENTITIES={data.statusText ? data.data.entities : []}/> 
+        </thead>
+        <tbody>
+          <TableRows ENTITIES={data.statusText ? data.data.entities : []} ROLES={[]}/>
+        </tbody>
       </table>
       <ModalsManager/>
     </>

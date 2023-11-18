@@ -17,7 +17,7 @@ const TableRows = ({ENTITIES}) => {
       {    
         !!data && data.data.roles.map(role =>{
           return(
-              <tr key={role.id}>
+              <tr key={role._id}>
                 <RoleCeld role={role} entities={ENTITIES}/>
                 <PermisionsByRoleRows ENTITIES={ENTITIES} role={role}/>
               </tr>

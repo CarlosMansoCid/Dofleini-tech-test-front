@@ -5,12 +5,12 @@ const TableHeaders = ({ENTITIES}) => {
   return (
     <>
         <tr>
-            <th colspan='1' className='upper_celd'></th>
+            <th colSpan='1' className='upper_celd'></th>
             {
             ENTITIES.map((entity)=>{
               if(entity.permissions.length > 0){
                 return(
-                  <EntityCeld key={entity.id} entity={entity}/>
+                  <EntityCeld key={entity._id} entity={entity}/>
                   )
 
                 }
