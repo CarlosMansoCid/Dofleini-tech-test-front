@@ -2,7 +2,7 @@ import BasicModal from "../basicModal/BasicModal"
 import { useContext } from "react"
 import { ModalContext } from "../../../contexts/ModalContext"
 import { MESSAGES_TYPES } from "../messages/MessageBox"
-import './deletePermissionsFromRoleModal.styles.css'
+import '../modals.styles.css'
 import MessageBox from "../messages/MessageBox"
 import DeleteButtonBig from "../../buttons/deleteButtonBig/DeleteButtonBig"
 import { useDeleteEntityPermissions } from "../../../hooks/useDeleteEntityPermissions"
@@ -19,9 +19,9 @@ const DeleteAllEntityPermissionsModal = () => {
   } 
   return (
     <BasicModal>
-      <div className="delete_role_modal__content_container">
+      <div className="modal__content_container">
           <h5>Desea retirar todos los permisos de la entidad: 
-            <span className="delete_role_modal__names_span">{modalPayload.entity.name}</span> 
+            <span className="red_names_span">{modalPayload.entity.name}</span> 
           </h5>
           {
             !!deletePermissions.isSuccess ?

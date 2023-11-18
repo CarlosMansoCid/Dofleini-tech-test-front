@@ -2,7 +2,7 @@ import BasicModal from "../basicModal/BasicModal"
 import { useContext } from "react"
 import { ModalContext } from "../../../contexts/ModalContext"
 import { MESSAGES_TYPES } from "../messages/MessageBox"
-import './addPermissionsAtRoleModal.styles.css'
+import '../modals.styles.css'
 import SuccessButtonBig from "../../buttons/successButtonbig/SuccessButtonBig"
 import { useAddPermissionAtRole } from "../../../hooks/useAddPermissionAtRole"
 import MessageBox from "../messages/MessageBox"
@@ -19,11 +19,11 @@ const AddPermissionAtRoleModal = () => {
   }
   return (
     <BasicModal>
-      <div className="add_role_modal__content_container">
+      <div className="modal__content_container">
           <h5>Desea agregar el permiso: 
-            <span className="names_span">{modalPayload.permission}</span> 
+            <span className="green_names_span">{modalPayload.permission}</span> 
             al rol: 
-            <span className="names_span">{modalPayload.role}</span>
+            <span className="green_names_span">{modalPayload.role}</span>
           </h5>
           {
             !!addPermissionAtRole.isSuccess ?
@@ -33,7 +33,7 @@ const AddPermissionAtRoleModal = () => {
                                              message={addPermissionAtRole?.error?.response?.data?.message}/>
             :<></>
           }
-          <div className="add_role_modal__button_container">
+          <div className="add_modal__button_container">
           {
             !addPermissionAtRole.isSuccess && !addPermissionAtRole.isError ?
             <SuccessButtonBig action={()=>handleAddPermission()} 

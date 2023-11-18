@@ -1,4 +1,4 @@
-import './clearAllThePermissionsFromRole.styles.css'
+import '../modals.styles.css'
 import BasicModal from "../basicModal/BasicModal"
 import { useContext } from "react"
 import { ModalContext } from "../../../contexts/ModalContext"
@@ -19,9 +19,9 @@ const ClearAllThePermissionsFromtRoleModal = () => {
 
   return (
     <BasicModal>
-      <div className="clear_all_permissions_modal__content_container">
+      <div className="modal__content_container">
           <h5>Desea retirar todos los permisos al rol: 
-            <span className="clear_all_permissions_names_span"> { modalPayload.role}</span>
+            <span className="red_names_span"> { modalPayload.role}</span>
           </h5>
           {
             !!clearPermissionFromRole.isSuccess ?
@@ -31,7 +31,7 @@ const ClearAllThePermissionsFromtRoleModal = () => {
                                              message={clearPermissionFromRole?.error?.response?.data?.message}/>
             :<></>
           }
-          <div className="clear_all_permissions_modal__button_container">
+          <div className="add_modal__button_container">
           {
             !clearPermissionFromRole.isSuccess && !clearPermissionFromRole.isError ?
             <DeleteButtonBig action={()=>handleClearPermission()} 

@@ -1,4 +1,4 @@
-import './addAllTheEntityPermissionsToAllRolesModal.styles.css'
+import '../modals.styles.css'
 import BasicModal from "../basicModal/BasicModal"
 import { useContext } from "react"
 import { ModalContext } from "../../../contexts/ModalContext"
@@ -19,10 +19,10 @@ const AddAllTheEntityPermissionsToAllRolesModal = () => {
   }
   return (
     <BasicModal>
-      <div className="add_to_all_roles_modal__content_container">
+      <div className="modal__content_container">
           <h5>Desea agregar todos los permisos de la entidad: 
-            <span className="add_to_all_roles_names_span"> { modalPayload.entityName}</span>
-            a todos los <span className='add_to_all_roles_names_span'>ROLES</span>
+            <span className="green_names_span"> { modalPayload.entityName}</span>
+            a todos los <span className='green_names_span'>ROLES</span>
           </h5>
           {
             !!addPermissionToAllRoles.isSuccess ?
@@ -32,7 +32,7 @@ const AddAllTheEntityPermissionsToAllRolesModal = () => {
                                              message={addPermissionToAllRoles?.error?.response?.data?.message}/>
             :<></>
           }
-          <div className="add_to_all_roles_modal__button_container">
+          <div className="add_modal__button_container">
           {
             !addPermissionToAllRoles.isSuccess && !addPermissionToAllRoles.isError ?
             <SuccessButtonBig action={()=>handleAddPermission()} 

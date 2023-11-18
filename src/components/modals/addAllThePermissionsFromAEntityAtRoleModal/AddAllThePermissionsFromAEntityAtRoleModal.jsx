@@ -5,7 +5,7 @@ import { MESSAGES_TYPES } from "../messages/MessageBox"
 import SuccessButtonBig from "../../buttons/successButtonbig/SuccessButtonBig"
 import { useAddPermissionAtRole } from "../../../hooks/useAddPermissionAtRole"
 import MessageBox from "../messages/MessageBox"
-import './addAllThePermissionsFromAEntityAtRole.styles.css'
+import '../modals.styles.css'
 
 const AddAllPermissionFromAEntityAtRoleModal = () => {
   const {addPermissionAtRole} = useAddPermissionAtRole(['add-permission-at-role'])
@@ -26,9 +26,9 @@ const AddAllPermissionFromAEntityAtRoleModal = () => {
   }
   return (
     <BasicModal>
-      <div className="add_all_permissions_modal__content_container">
+      <div className="modal__content_container">
           <h5>Desea agregar todos los permisos al rol: 
-            <span className="add_all_permissions_names_span"> { modalPayload.role.name}</span>
+            <span className="green_names_span"> { modalPayload.role.name}</span>
           </h5>
           {
             !!addPermissionAtRole.isSuccess ?
@@ -38,7 +38,7 @@ const AddAllPermissionFromAEntityAtRoleModal = () => {
                                              message={addPermissionAtRole?.error?.response?.data?.message}/>
             :<></>
           }
-          <div className="add_all_permissions_modal__button_container">
+          <div className="add_modal__button_container">
           {
             !addPermissionAtRole.isSuccess && !addPermissionAtRole.isError ?
             <SuccessButtonBig action={()=>handleAddPermission()} 

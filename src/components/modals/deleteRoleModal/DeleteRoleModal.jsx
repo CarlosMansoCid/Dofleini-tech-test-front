@@ -2,7 +2,7 @@ import BasicModal from "../basicModal/BasicModal"
 import { useDeleteRole } from "../../../hooks/useDeleteRole"
 import { useContext } from "react"
 import { ModalContext } from "../../../contexts/ModalContext"
-import './deleteRoleModal.styles.css'
+import '../modals.styles.css'
 import DeleteButtonBig from "../../buttons/deleteButtonBig/DeleteButtonBig"
 import MessageBox from "../messages/MessageBox"
 import { MESSAGES_TYPES } from "../messages/MessageBox"
@@ -13,8 +13,8 @@ const DeleteRoleModal = () => {
  
   return (
     <BasicModal>
-      <div className="delete_modal__content_container">
-          <h5>Desea borrar el rol: {modalPayload.payload.name}</h5>
+      <div className="modal__content_container">
+          <h5>Desea borrar el rol: <span className="red_names_span">{modalPayload.payload.name}</span></h5>
           {
             !!deleteRole.isSuccess ?
             <MessageBox type={MESSAGES_TYPES.SUCCESS} message='Rol eliminado con exito'/>
@@ -23,7 +23,7 @@ const DeleteRoleModal = () => {
                                              message={deleteRole?.error?.response?.data?.message}/>
             :<></>
           }
-          <div className="delete_modal__button_container">
+          <div className="add_modal__button_container">
             {
               !deleteRole.isSuccess && !deleteRole.isError ?
               <DeleteButtonBig title='Eliminar rol' 

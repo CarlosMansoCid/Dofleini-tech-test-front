@@ -1,7 +1,7 @@
 import BasicModal from "../basicModal/BasicModal"
 import {useAddPermissions} from "../../../hooks/useAddPermissions"
 import MessageBox, { MESSAGES_TYPES } from "../messages/MessageBox"
-import './addRoleModal.styles.css'
+import '../modals.styles.css'
 import {useForm} from "react-hook-form"
 import Services from '../../../services/services'
 import ENDPOINTS from "../../../services/endpoints"
@@ -32,10 +32,10 @@ const AddPermissionsModal = () => {
   
   return (
     <BasicModal>
-        <div className="new_role_modal__content_container">
+        <div className="modal__content_container">
             <h5>Agregar nuevo permiso a la entidad:</h5>
-            <form onSubmit={handleSubmit(onSubmit)} className="role_form">
-              <select {...register('entity', {required:'Seleccione una entidad'})} className="new_role__input">
+            <form onSubmit={handleSubmit(onSubmit)} className="add_modal__form">
+              <select {...register('entity', {required:'Seleccione una entidad'})} className="add_modal__input">
                 {
                   !!data ?
                   data.data.entities.map(dat =>{
@@ -51,7 +51,7 @@ const AddPermissionsModal = () => {
                     :<></>
                 }
                 <input type="text" 
-                       className="new_role__input"
+                       className="add_modal__input"
                        title="Solo debe contener letas mayusculas, en caso de ser varias palabras debe separarla 
                               con guion bajo, ej: PERMISSION o NEW_PERMISSION"
                        placeholder="Nombre del permiso "
@@ -81,8 +81,8 @@ const AddPermissionsModal = () => {
                     && !addPermissions.isSuccess && !addPermissions.isError ?
                     <input  type="submit" 
                             value={addPermissions.isPending ? 'loading...' : 'Agregar'}
-                            id={addPermissions.isPending ? 'inactive' : ''}
-                            className="new_role__submit_button"/>
+                            id={addPermissions.isPending ? 'add_submit_button__inactive' : ''}
+                            className="add_submit_button"/>
                     :<></>
                 }
             </form>

@@ -1,7 +1,7 @@
 import BasicModal from "../basicModal/BasicModal"
 import { useAddEntity } from "../../../hooks/useAddEntity"
 import MessageBox, { MESSAGES_TYPES } from "../messages/MessageBox"
-import './addRoleModal.styles.css'
+import '../modals.styles.css'
 import {useForm} from "react-hook-form"
 
 const AddRoleModal = () => {
@@ -23,14 +23,14 @@ const AddRoleModal = () => {
   
   return (
     <BasicModal>
-        <div className="new_role_modal__content_container">
+        <div className="modal__content_container">
             <h5>Crear nueva entidad</h5>
-            <form onSubmit={handleSubmit(onSubmit)} className="role_form">
+            <form onSubmit={handleSubmit(onSubmit)} className="add_modal__form">
                 <input type="text" 
-                       className="new_role__input"
+                       className="add_modal__input"
                        title="Solo debe contener letas mayusculas, en caso de ser varias palabras debe separarla 
                               con guion bajo, ej: ENTITY o NEW_ENTITY"
-                       placeholder="Nombre del rol "
+                       placeholder="Nombre de la entidad "
                        {...register('name',{
                         required: 'Este campo es requerido',
                         pattern: {
@@ -56,8 +56,8 @@ const AddRoleModal = () => {
                     !errors?.name && !!name && !addEntity.isSuccess && !addEntity.isError ?
                     <input  type="submit" 
                             value={addEntity.isPending ? 'loading...' : 'Agregar'}
-                            id={addEntity.isPending ? 'inactive' : ''}
-                            className="new_role__submit_button"/>
+                            id={addEntity.isPending ? 'add_submit_button__inactive' : ''}
+                            className="add_submit_button"/>
                     :<></>
                 }
             </form>

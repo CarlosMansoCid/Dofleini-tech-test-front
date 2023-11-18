@@ -2,7 +2,7 @@ import BasicModal from "../basicModal/BasicModal"
 import { useContext } from "react"
 import { ModalContext } from "../../../contexts/ModalContext"
 import { MESSAGES_TYPES } from "../messages/MessageBox"
-import './deletePermissionsFromRoleModal.styles.css'
+import '../modals.styles.css'
 import { useDeletePermissionFromRole } from "../../../hooks/useDeletePermissionFromRole"
 import MessageBox from "../messages/MessageBox"
 import DeleteButtonBig from "../../buttons/deleteButtonBig/DeleteButtonBig"
@@ -19,11 +19,11 @@ const DeletePermissionFromRoleModal = () => {
   } 
   return (
     <BasicModal>
-      <div className="delete_role_modal__content_container">
+      <div className="modal__content_container">
           <h5>Desea retirar el permiso: 
-            <span className="delete_role_modal__names_span">{modalPayload.permission}</span> 
+            <span className="red_names_span">{modalPayload.permission}</span> 
             al rol: 
-            <span className="delete_role_modal__names_span">{modalPayload.role}</span>
+            <span className="red_names_span">{modalPayload.role}</span>
           </h5>
           {
             !!deletePermissionFromRole.isSuccess ?
@@ -33,7 +33,7 @@ const DeletePermissionFromRoleModal = () => {
                                              message={deletePermissionFromRole?.error?.response?.data?.message}/>
             :<></>
           }
-          <div className="delete_role_modal__button_container">
+          <div className="add_modal__button_container">
           {
             !deletePermissionFromRole.isSuccess && !deletePermissionFromRole.isError ?
             <DeleteButtonBig action={()=>handleDeletePermission()} 

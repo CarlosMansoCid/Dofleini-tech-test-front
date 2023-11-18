@@ -1,7 +1,7 @@
 import {createPortal} from 'react-dom'
 import { useContext } from 'react'
 import { ModalContext } from '../../../contexts/ModalContext'
-import './basicModal.styles.css'
+import '../modals.styles.css'
 import CloseModalButtonRadio from '../../buttons/modal/CloseModalButtonRadio'
 
 const BasicModal = ({open,children}) => {
