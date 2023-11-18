@@ -10,7 +10,7 @@ import { MESSAGES_TYPES } from "../messages/MessageBox"
 const DeleteRoleModal = () => {
   const {deleteRole} = useDeleteRole(['delete_role'])
   const {modalPayload} = useContext(ModalContext)
-
+ 
   return (
     <BasicModal>
       <div className="delete_modal__content_container">

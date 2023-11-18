@@ -5,10 +5,13 @@ import DeleteButton from "../buttons/DeleteButton"
 import { useContext } from "react"
 import { ModalContext } from "../../contexts/ModalContext"
 import { MODALS_TYPES } from "../modals/modalsManager/ModalsManager"
+import useGetIfAllRolesHaveAllPermissionsOfAEntity from "../../hooks/useGetIfAllRolesHaveAllPermissionsOfAEntity"
+
 
 const EntityCeld = ({entity}) => {
   const {toogleValue,setTrue,setFalse} = useToogle()
   const context = useContext(ModalContext)
+  const {haveAllThePermissions} = useGetIfAllRolesHaveAllPermissionsOfAEntity(entity)
 
   const handleAddAllThePermissions = () =>{
     context.setModalPayload({
@@ -30,6 +33,7 @@ const EntityCeld = ({entity}) => {
             !!toogleValue ?
             <CheckBox onActiveAction={()=>handleAddAllThePermissions()} 
                       onDeactiveAction={()=>{}}
+                      isExternalActivated={haveAllThePermissions}
                       />
             :<></>
           }
