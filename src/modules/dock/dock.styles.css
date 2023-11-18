@@ -1,0 +1,8 @@
+.dock{
+    width: 98vw;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}

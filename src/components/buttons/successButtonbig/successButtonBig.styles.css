@@ -1,0 +1,24 @@
+.success_button_big{
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    color: #ddd;
+    cursor: pointer;
+    transition: .3s;
+    padding: 1rem 0;
+
+}
+#success_active{
+    pointer-events: all;
+    background-color: var(--green);
+}
+#success_active:hover{
+    background-color: var(--green_dark);
+}
+#success_active:active{
+    background-color: var(--green)
+}
+#success_inactive{
+    pointer-events: none;
+  background-color: var(--green_inactive);
+}

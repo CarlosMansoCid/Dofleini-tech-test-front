@@ -1,0 +1,72 @@
+.table_celd{
+    text-align: center;
+    padding: .5rem;
+    cursor: pointer;
+}
+.table_celd:hover{
+    background-color: var(--celd_header_bg_ligth);
+}
+.permision_celd{
+    z-index:888;
+    background-color: var(--celd_header_bg_dark);
+    color: var(--white);
+    position: sticky;
+    top: 0px;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    min-width: 8rem;
+    height: 2rem;
+}
+.entity_celd{
+    transition: .3s;
+    cursor: pointer;
+    padding: 1rem;
+    min-width:10rem;
+    height: 2rem;
+}
+.entity_celd:hover{
+    background-color: var(--celd_header_bg_dark);
+    color: var(--white);
+}
+.icon{
+    padding: .5rem;
+    border-radius: 10px;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 auto;
+    color: var(--white);
+}
+#check{
+    background-color: var(--green);
+}
+#no_checked{
+    background-color: var(--red);
+}
+
+.role_name{
+    z-index:10;
+    background-color: var(--celd_header_bg);
+    color: var(--white);
+    position: sticky;
+    left: 0px;
+    min-width: 10rem;
+    padding: 0 .3rem;
+    cursor: pointer;
+    transition: .3s;
+    min-width: 10rem;
+}
+.role_name:hover{
+    background-color: var(--celd_header_bg_dark);
+}
+.role_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#permision{
+    width: 100%;
+    
+}

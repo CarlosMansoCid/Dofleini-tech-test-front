@@ -1,0 +1,8 @@
+ .roles_header{
+    z-index:999;
+    color: var(--white);
+    position: sticky;
+    left: 0px;
+    top:0px;
+    background-color: var(--celd_header_bg_dark);
+}

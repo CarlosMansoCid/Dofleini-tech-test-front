@@ -1,0 +1,31 @@
+.dock__button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left:.5rem;
+    padding: .5rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+}
+
+.dock__button_icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.dock__button_title{
+    margin-left: .3rem;
+}
+
+#add{
+    background-color: var(--green);
+}
+#add:hover{
+    background-color: var(--green_dark);
+}
+#add:active{
+    background-color: var(--green);
+}

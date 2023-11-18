@@ -1,0 +1,79 @@
+.modal__content_container{
+    min-width: 30vw;
+    border-radius: 5px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add_modal__input{
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+.add_modal__form{
+    width: 80%;
+    margin: 0 auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.add_modal__button_container{
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.add_submit_button{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--green);
+    color: #ddd;
+    transition: .3s;
+    margin-top: 1rem;
+}
+.add_submit_button:hover{
+    background-color: var(--green_dark);
+}
+
+#add_submit_button__inactive{
+    background-color: var(--green_inactive);
+}
+.green_names_span{
+    color: var(--green);
+    margin: 0 .5rem;
+}
+.red_names_span{
+    color: var(--red_ligth);
+    margin: 0 .5rem;
+}
+.basic_modal{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color:#c3c1c1c3;
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.basic__modal_children_container{
+    position: relative;
+    min-width: 10rem;
+    min-height: 5rem;
+    background-color: #ddd;
+    z-index: 999;
+    padding: 1rem;
+}

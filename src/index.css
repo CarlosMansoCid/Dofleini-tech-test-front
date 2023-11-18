@@ -1,0 +1,46 @@
+:root{
+  --background: #ddd;
+  --celd_header_bg_ligth: #e2abfb;
+  --celd_header_bg: #ae00ff;
+  --celd_header_bg_dark: #5f028a;
+  --white: #ffffff;
+  --green: #1a9c03;
+  --green_dark: #123123;
+  --green_inactive: #7bf99a;
+  --red: #790101;
+  --red_ligth: #ed2525;
+}
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+table, tr, th, td{
+  border: solid 1px var(--celd_header_bg_dark);
+  border-collapse: collapse;
+}
+
+#full{
+  width: 100%;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.sticky_left{
+  position: sticky;
+  left: 0px;
+}
+.sticky_top{
+  position: sticky;
+  top: 0px;
+}
