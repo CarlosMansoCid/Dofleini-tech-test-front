@@ -2,9 +2,22 @@ import { stringAdapter } from "../../utils/strings-adapter"
 import CheckBox from "../checkBox/CheckBox"
 import useToogle from "../../hooks/useToogle"
 import DeleteButton from "../buttons/DeleteButton"
+import { useContext } from "react"
+import { ModalContext } from "../../contexts/ModalContext"
+import { MODALS_TYPES } from "../modals/modalsManager/ModalsManager"
 
 const EntityCeld = ({entity}) => {
   const {toogleValue,setTrue,setFalse} = useToogle()
+  const context = useContext(ModalContext)
+
+  const handleAddAllThePermissions = () =>{
+    context.setModalPayload({
+      type: MODALS_TYPES.ADD_ALL_ENTITY_PERMISSIONS_AT_ALL_ROLES,
+      entityId: entity._id,
+      entityName: entity.name
+    })
+    context.setOpenModal()
+  }
 
   return (
     <th key={entity.id} 
@@ -15,7 +28,9 @@ const EntityCeld = ({entity}) => {
         <div className="role_container">
           {
             !!toogleValue ?
-            <CheckBox onActiveAction={()=>{}} onDeactiveAction={()=>{}}/>
+            <CheckBox onActiveAction={()=>handleAddAllThePermissions()} 
+                      onDeactiveAction={()=>{}}
+                      />
             :<></>
           }
           {stringAdapter(entity.name)}

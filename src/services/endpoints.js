@@ -1,5 +1,6 @@
 const ENDPOINTS = Object.freeze({
     entities: '/entities',
-    roles: '/roles'
+    roles: '/roles',
+    rolesByEntity: '/roles/entity'
 })
 export default ENDPOINTS
