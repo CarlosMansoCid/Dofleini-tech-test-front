@@ -8,6 +8,7 @@ const AddAllPermissions = lazy(()=>import('../addAllThePermissionsFromAEntityAtR
 const ClearAllPermissions = lazy(()=>import('../clearAllThePermissionsFromRoleModal/ClearAllThePermissionsFromRoleModal'))
 const AddAllEntityPermissionsAtAllRoles = lazy(()=>import('../addAllTheEntityPermissionsToAllRolesModal/AddAllTheEntityPermissionsToAllRolesModal'))
 const DeleteAllEntityPermissionsFromAllRoles = lazy(()=>import('../deleteAllTheEntityPermissionsFromAllRoles/DeleteAllTheEntityPermissionsFromAllRoles'))
+const DeleteAllEntityPermissions = lazy(()=>import('../deleteAllTheEntityPermissionsModal/DeleteAllTheEntityPermissionsModal'))
 
 export const MODALS_TYPES = Object.freeze({
     DELETE_ROLE: 'delete-role',
@@ -17,7 +18,8 @@ export const MODALS_TYPES = Object.freeze({
     ADD_ALL_PERMISSIONS: 'add-all-permissions',
     CLEAR_ALL_PERMISSIONS: 'clear-all-permissions',
     ADD_ALL_ENTITY_PERMISSIONS_AT_ALL_ROLES: 'add-all-entity-permissions-at-all-roles',
-    DELETE_ALL_ENTITY_PERMISSIONS_FROM_ALL_ROLES: 'delete-all-the-entity-permissions-from-all-roles'
+    DELETE_ALL_ENTITY_PERMISSIONS_FROM_ALL_ROLES: 'delete-all-the-entity-permissions-from-all-roles',
+    DELETE_ALL_ENTITY_PERMISSIONS: 'delete-all-entity-permissions',
 })
 const ModalsLoader = () =>{
     const {modalPayload} = useContext(ModalContext)
@@ -31,6 +33,7 @@ const ModalsLoader = () =>{
         case MODALS_TYPES.CLEAR_ALL_PERMISSIONS: return <ClearAllPermissions/>
         case MODALS_TYPES.ADD_ALL_ENTITY_PERMISSIONS_AT_ALL_ROLES: return <AddAllEntityPermissionsAtAllRoles/>
         case MODALS_TYPES.DELETE_ALL_ENTITY_PERMISSIONS_FROM_ALL_ROLES: return <DeleteAllEntityPermissionsFromAllRoles/>
+        case MODALS_TYPES.DELETE_ALL_ENTITY_PERMISSIONS: return <DeleteAllEntityPermissions/>;
         default: return <></>
     }
 }

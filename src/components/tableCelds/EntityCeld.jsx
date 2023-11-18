@@ -28,6 +28,14 @@ const EntityCeld = ({entity}) => {
     })
     context.setOpenModal()
   }
+  const handleDeleteAllThePermissionsFromEntity = () =>{
+    context.setModalPayload({
+      type: MODALS_TYPES.DELETE_ALL_ENTITY_PERMISSIONS,
+      permissions: entity.permissions,
+      entity: entity
+    })
+    context.setOpenModal()
+  }
 
   return (
     <th key={entity.id} 
@@ -47,7 +55,7 @@ const EntityCeld = ({entity}) => {
           {stringAdapter(entity.name)}
           {
             !!toogleValue ?
-            <DeleteButton/>
+            <DeleteButton action={() => handleDeleteAllThePermissionsFromEntity()}/>
             :<></>
           }
         </div>
