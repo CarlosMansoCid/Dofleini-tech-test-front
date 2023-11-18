@@ -22,7 +22,13 @@ const MainDock = () => {
         {
           title: 'Agregar entidad',
           variant: 'add',
-          action: ()=>{}     
+          action: ()=>{
+            context.setModalPayload({
+              payload:{},
+              type:MODALS_TYPES.ADD_ENTITY
+            })
+          context.setOpenModal()
+          }    
         }
       ]
     
