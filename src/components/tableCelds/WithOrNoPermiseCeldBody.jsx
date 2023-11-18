@@ -7,7 +7,6 @@ import { MODALS_TYPES } from "../modals/modalsManager/ModalsManager"
 
 const WithOrNoPermiseCeldBody = ({isActive, entity, permision, role}) => {
   const context = useContext(ModalContext)
-  
   const handleAddPermission = () => {
     context.setModalPayload({
       type: MODALS_TYPES.ADD_PERMISSION_AT_ROLE,
@@ -27,7 +26,6 @@ const WithOrNoPermiseCeldBody = ({isActive, entity, permision, role}) => {
     })
     context.setOpenModal()
   }
-
   return (
     isActive ?
     <WithPermisionCeld action={()=>handleDeletePermission()}/>

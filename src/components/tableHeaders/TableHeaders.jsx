@@ -8,11 +8,14 @@ const TableHeaders = ({ENTITIES}) => {
             <th colspan='1' className='upper_celd'></th>
             {
             ENTITIES.map((entity)=>{
+              if(entity.permissions.length > 0){
                 return(
-                        <EntityCeld key={entity.id} entity={entity}/>
-                    )
-                })
-            }
+                  <EntityCeld key={entity.id} entity={entity}/>
+                  )
+
+                }
+              })
+              }
         </tr>
 
     </>

@@ -11,13 +11,12 @@ export const useDeleteEntityPermissions = ({mutationKey}) => {
             mutationKey: mutationKey,
             mutationFn: (payload) => SERVICE.patchRequest(`${ENDPOITS.entities}/${payload.entityId}`, {permissions:payload.permissions}),
             onSuccess:()=>{
-                queryClient.invalidateQueries({queryKey:['roles']})
                 queryClient.invalidateQueries({queryKey:['entities']})
+                queryClient.invalidateQueries({queryKey:['roles']})
             }
         }
         
         )
-    console.log(queryClient.getQueriesData())
 
     return {
         deletePermissions

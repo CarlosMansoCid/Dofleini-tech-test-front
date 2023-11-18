@@ -5,7 +5,7 @@ import Services from '../../services/services'
 import ENDPOINTS from '../../services/endpoints'
 import { useQuery } from "@tanstack/react-query"
 
-const TableRows = ({ROLES,ENTITIES}) => {
+const TableRows = ({ENTITIES}) => {
   const RolesServices = new Services()
   const {isLoading, data, isError} = useQuery({
     queryKey: ['roles'],
